@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+# Your Project Title
+> Write a little description about your project. 2-3 sentances are enough.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
-## Available Scripts
 
-In the project directory, you can run:
+![](https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Requirements  (Prerequisites)
+Tools and packages required to successfully install this project.
+For example:
+* Linux [Install](https://link-for-setup-guide)
+* Python 3.3 and up [Install](https://link-for-setup-guide)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
+A step by step list of commands / guide that informs how to install an instance of this project. 
 
-### `npm test`
+`$ pip install foobar`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`$ npm install project-name --save`
 
-### `npm run build`
+`$ any other command`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For Linux and OS X
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`npm install project-name --save`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+For Windows
 
-### `npm run eject`
+`git clone project-url`
+ 
+## Screenshots
+Use this space to give a little demo of your project. Attach important screenshots if applicable. This section is optional and might not be applicable in some cases.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Screenshots of projects](https://dradisframework.com/images/pro/screenshots/screenshot-62_small.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Screenshots of the project](http://securityroots.com/blog/wp-content/uploads/2013/12/snowcrash-01.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Features
+Write a little about unique features of your project and what makes it outstanding. Describe the functionalities of your project. You can make a list of it with some descriptions, like:
+* Used Bootstrap to make it 100% responsive
+* Used AI/ML to automate some stuff
+* Etc Etc......
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage example
+Show how and what your project does. Users should figure out how your project solves their problem by looking at the code example. Spice this up with code blocks and potentially more screenshots. These examples should motivate the users to use your project. 
+```python
+import foobar
 
-## Learn More
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+``` 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mention any other documentation or live example available for reverence.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Running the tests
+Describe and show how to run the tests with code examples.. Explain how to run the automated tests for this system.  Also explain how to test and why to test.
 
-### Code Splitting
+Give code examples as:
+1. `test example 1`
+2. `test example 2`
+3. `npm test`
+4. `test till you finish`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Deployment Notes
+Explain how to deploy your project  on a live server. To do so include step by step guide. Potentially do this for multiple platforms. 
+```sh
+virtualenv foobar
+npm test
+make install 
+pip install -e .
+More examples please....
+```
 
-### Analyzing the Bundle Size
+## Tech Stack / Built With
+List down the technology / frameworks / tools / technology you have used in this project.
+1. [Laravel](https://laravel.com/) - The PHP framework
+2. [IPFS](https://ipfs.io/)  - A peer-to-peer hypermedia protocol to make the web faster, safer, and more open. 
+3. [Android](https://www.android.com/) - The world’s most popular mobile OS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How to Contribute
+Mention how anyone can contribute to make this project more productive or fix bugs in it.  
 
-### Making a Progressive Web App
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. Please make sure to update tests as appropriate. If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Steps to contribute:
+1. Fork this repository (link to your repository)
+2. Create your feature branch (git checkout -b feature/fooBar)
+3. Commit your changes (git commit -am 'Add some fooBar')
+4. Push to the branch (git push origin feature/fooBar)
+5. Create a new Pull Request
 
-### Advanced Configuration
+Additionally you can create another document called CONTRIBUTING.md which gives instructions about how to contribute. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
-### Deployment
+## Authors
+Write about yourself or your organization, who created this project. For example:
+ 
+Sagar Ganiga  – tech.ganiga@gmail.com
+ 
+ You can find me here at:
+[Github](https://github.com/SagarGaniga)
+[LinkedIn](https://www.linkedin.com/in/sagar-ganiga/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Credits
+Give credits to all the useful resources you used to create this project. It could be a link to any repository which inspired you to build this project, any blog or links to people who contributed in this project.
 
-### `npm run build` fails to minify
+A heartfelt thank you to [@UjalaJha](https://github.com/UjalaJha) for the encouragement I needed to get this idea off the ground and start writing!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you to the following awesome geeks for sending PRs and improving the Quality of this project ❤️
+* [@UjalaJha](https://github.com/UjalaJha)
+
+Here's a list of other related projects / blogs which helped me in creating the best possible version of my project:
+* [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by [@PurpleBooth](https://gist.github.com/PurpleBooth)
+* [A Beginners Guide to writing a Kickass README ✍](https://medium.com/@meakaakka/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3) by Akash Nimare
+* [readme-best-practices](https://github.com/jehna/readme-best-practices) by [@jehna](https://github.com/jehna/)
+* [readme-template](https://github.com/dbader/readme-template/blob/master/README.md) by [@dbader](https://github.com/dbader/)
+* [art-of-readme](https://github.com/noffle/art-of-readme/blob/master/README.md) by [@noffle](https://github.com/noffle/)
+* [Make a README](https://www.makeareadme.com/)
+
+## License
+A short snippet describing the license (MIT, Apache etc).
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+MIT © Abdur Rakib Rony
