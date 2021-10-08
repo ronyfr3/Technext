@@ -1,9 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
-export const getPosts = createAsyncThunk("posts/getPosts", async () => {
-  return axios
-    .get("https://api.spacexdata.com/v3/launches")
-    .then((res) => res.data)
+
+export const getPosts = createAsyncThunk("posts/getPosts", async (props) => {
+  console.log("props", props);
+  let url = "https://api.spacexdata.com/v3/launches/?";
+  if (props.rocketName) {
+    url = url + `rocket_name=${props.rocketName.replace(" ", "+")}`;
+  }
+  if (props["start/end"]) {
+    url = url + `start/end=${props["start/end"]}`;
+  }
+  return fetch(url)
+    .then(async (res) => await res.json())
     .catch((err) => err);
 });
 

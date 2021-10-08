@@ -1,13 +1,13 @@
 import React from "react";
 import NavbarComponent from "./navbar/Navbar";
 import "bootstrap/dist/css/bootstrap.css";
-import Cards from "./cards/Cards";
+import Home from "./Pages/Home";
 
 const App = () => {
   return (
     <div>
       <NavbarComponent />
-      <Cards />
+      <Home />
     </div>
   );
 };

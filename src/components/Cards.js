@@ -1,26 +1,21 @@
 import React, { useEffect } from "react";
-import Filter from "../features/Filter";
 import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../redux/ApiData";
-import Loading from "../utils/Loader";
+import Loading from "../components/Loader";
 
 const Cards = () => {
-  const searchData = useSelector((state) => state.searchData.value);
-  const { data, status } = useSelector((state) => state.allData);
-  // console.log(data);
-  // console.log(status);
+  const { data, status } = useSelector((state) => state.posts);
+  console.log("posts", data);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  //DISPLAY LOADER
   if (status === "loading") return <Loading />;
 
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
-      <Filter />
       <div className="d-flex align-items-center justify-content-center flex-wrap mt-4">
         {data?.map((x, i) => {
           return (
@@ -39,9 +34,9 @@ const Cards = () => {
                   Rocket Name: {x?.rocket?.rocket_name}
                 </h4>
                 <p className="card-text">Launch Year: {x?.launch_year}</p>
-                <p className="card-text">
-                  Upcoming: {x?.upcoming === true ? "True" : "False"}
-                </p>
+                <small className="card-text text-muted">
+                  Rocket Type: {x?.rocket?.rocket_type}
+                </small>
               </div>
             </div>
           );
