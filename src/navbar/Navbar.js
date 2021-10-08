@@ -5,7 +5,7 @@ const NavbarComponent = () => {
   return (
     <div>
       <Navbar className="d-flex bg-dark">
-        <h4 className="mx-auto text-info ">SpacexData</h4>
+        <h4 className="mx-auto text-info ">SpaceX</h4>
       </Navbar>
     </div>
   );
