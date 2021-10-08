@@ -1,8 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import {BaseAPI} from "./BaseApi";
+import { configureStore } from "@reduxjs/toolkit";
+import SearchReducer from "./Data";
+import postReducer from "./ApiData";
 
 export default configureStore({
-    reducer:{
-        [BaseAPI.reducerPath]:BaseAPI.reducer
-    }
-})
+  reducer: {
+    searchData: SearchReducer,
+    allData: postReducer,
+  },
+});
