@@ -1,76 +1,85 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { getPosts } from "../redux/ApiData";
-// import add from "date-fns/add";
-import format from "date-fns/format";
-import addYears from "date-fns/addYears";
-import addWeeks from "date-fns/addWeeks";
-import addMonths from "date-fns/addMonths";
+import React from "react";
+import Checkbox from "./Checkbox";
+import SearchInput from "./SearchInput";
+import Select from "./Select";
 
-const Filters = () => {
-  const [filter, setFilter] = useState({ rocketName: "", "start/end": "" });
+const launchDateOptions = [
+  {
+    value: "DEFAULT",
+    text: "Choose launch date",
+  },
+  {
+    value: "last-week",
+    text: "Last week",
+  },
+  {
+    value: "last-month",
+    text: "Last month",
+  },
+  {
+    value: "last-year",
+    text: "Last year",
+  },
+];
 
-  const handleChange = (e) => {
-    setFilter((oldFilter) => ({
-      ...oldFilter,
-      rocketName: e.target.value,
-    }));
-  };
-  const dispatch = useDispatch();
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(getPosts(filter));
-  };
-  console.log("ll", filter);
-  const handleLaunchDateChange = (e) => {
-    if (e.target.value === "last-week") {
-      const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(addWeeks(new Date(), -1), "yyyy-MM-dd");
-      setFilter((oldFilter) => ({
-        ...oldFilter,
-        "start/end": `start=${start}&end=${end}`,
-      }));
-    } else if (e.target.value === "last-month") {
-      const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(addMonths(new Date(), -1), "yyyy-MM-dd");
-      setFilter((oldFilter) => ({
-        ...oldFilter,
-        "start/end": `start=${start}&end=${end}`,
-      }));
-    } else if (e.target.value === "last-year") {
-      const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(addYears(new Date(), -1), "yyyy-MM-dd");
-      setFilter((oldFilter) => ({
-        ...oldFilter,
-        "start/end": `start=${start}&end=${end}`,
-      }));
-    }
-    dispatch(getPosts(filter));
-  };
+const launchStatusOption = [
+  {
+    value: "DEFAULT",
+    text: "Choose launch status",
+  },
+  {
+    value: "success",
+    text: "Success",
+  },
+  { value: "failure", text: "Failure" },
+];
 
+const Filters = ({
+  setFilters,
+  rocketName,
+  setRocketName,
+  searchByRocketName,
+}) => {
   return (
-    <form onSubmit={handleSubmit} className="d-flex">
-      <input
-        data-testid="searchInput"
-        className="form-control shadow-sm"
-        type="text"
-        placeholder="Type here..."
-        value={filter.rocketName}
-        onChange={handleChange}
+    <form
+      onSubmit={searchByRocketName}
+      className="container d-flex flex-column justify-content-center align-items-center"
+    >
+      <SearchInput
+        value={rocketName}
+        onChange={(e) => setRocketName(e.target.value)}
       />
-      <button className="btn btn-primary shadow-sm">search</button>
-      <select
-        className="form-select ms-3 shadow-sm"
-        defaultValue={"DEFAULT"}
-        onChange={handleLaunchDateChange}
-      >
-        <option value="DEFAULT" disabled hidden>
-          Launch Date
-        </option>
-        <option value="last-week">By Last Week</option>
-        <option value="last-month">By Last Month</option>
-        <option value="last-year">By Last Year</option>
-      </select>
+      <div className="d-flex mt-1">
+        <div className="d-flex m-2">
+          <Select
+            onChange={(e) =>
+              setFilters((oldFilters) => ({
+                ...oldFilters,
+                launchDate: e.target.value,
+              }))
+            }
+            options={launchDateOptions}
+          />
+          <Select
+            options={launchStatusOption}
+            onChange={(e) =>
+              setFilters((oldFilters) => ({
+                ...oldFilters,
+                launchStatus: e.target.value,
+              }))
+            }
+          />
+        </div>
+        <Checkbox
+          label="Upcomming"
+          onChange={() =>
+            setFilters((oldFilters) => ({
+              ...oldFilters,
+              upcoming: !oldFilters.upcoming,
+            }))
+          }
+        />
+      </div>
     </form>
   );
 };

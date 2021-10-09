@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import postReducer from "./ApiData";
+import LaunchReducer from "./LaunchSlice";
 
 export default configureStore({
   reducer: {
-    posts: postReducer,
+    launches: LaunchReducer,
   },
 });
