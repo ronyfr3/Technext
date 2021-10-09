@@ -22,6 +22,7 @@ A step by step list of commands to install an instance of this project.
 - `npm install reactstrap`
 - `npm install react-loader-spinner`
 - `npm install date-fns`
+- `npm install react-icons`
 - `npm install rakib-flex-style`
 
 ## Features
@@ -30,6 +31,7 @@ A step by step list of commands to install an instance of this project.
 - Used Redux/toolkit for state management
 - Used react-loader-spinner for showing loader
 - Used date-fns for formatting dates
+- Used react-icons for using icons
 - Used rakib-flex-style for using flex-properties
 - Used Jest for unit testing
 
