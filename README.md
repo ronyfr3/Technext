@@ -13,7 +13,7 @@ Tools and packages required to successfully install this project.
 
 ## Installation
 
-A step by step list of commands that informs how to install an instance of this project.
+A step by step list of commands to install an instance of this project.
 
 - `npx create-react-app [app_name]`
 - `npm install react-redux`
@@ -21,6 +21,7 @@ A step by step list of commands that informs how to install an instance of this 
 - `npm install bootstrap`
 - `npm install reactstrap`
 - `npm install react-loader-spinner`
+- `npm install date-fns`
 - `npm install rakib-flex-style`
 
 ## Features
@@ -28,6 +29,7 @@ A step by step list of commands that informs how to install an instance of this 
 - Used Bootstrap to make it 100% responsive.
 - Used Redux/toolkit for state management
 - Used react-loader-spinner for showing loader
+- Used date-fns for formatting dates
 - Used rakib-flex-style for using flex-properties
 - Used Jest for unit testing
 
