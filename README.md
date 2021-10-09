@@ -1,4 +1,4 @@
-# Project Title
+# SpaceX
 
 > Creating a React app with Redux Store management using an API source.
 
