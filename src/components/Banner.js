@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar } from "reactstrap";
 import { RiSpaceShipFill } from "react-icons/ri";
 
-const NavbarComponent = () => (
+const Banner = () => (
     <div>
       <Navbar className="d-flex align-items-center justify-content-center bg-dark bg-gradient">
         <RiSpaceShipFill className="text-primary display-5" />
@@ -11,4 +11,4 @@ const NavbarComponent = () => (
     </div>
 );
 
-export default NavbarComponent;
+export default Banner;

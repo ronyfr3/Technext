@@ -1,11 +1,11 @@
 import React from "react";
-import NavbarComponent from "./Navbar/Navbar";
+import Banner from "./components/Banner";
 import "bootstrap/dist/css/bootstrap.css";
 import Home from "./Pages/Home";
 
 const App = () => (
     <div>
-      <NavbarComponent />
+      <Banner />
       <Home />
     </div>
 );
