@@ -1,11 +1,13 @@
 import React from "react";
 import { Navbar } from "reactstrap";
+import { RiSpaceShipFill } from "react-icons/ri";
 
 const NavbarComponent = () => {
   return (
     <div>
-      <Navbar className="d-flex bg-dark bg-gradient">
-        <h4 className="mx-auto text-info">SpaceX</h4>
+      <Navbar className="d-flex align-items-center justify-content-center bg-dark bg-gradient">
+        <RiSpaceShipFill className="text-primary display-5" />
+        <h4 className=" text-primary">SpaceX Evolution</h4>
       </Navbar>
     </div>
   );
