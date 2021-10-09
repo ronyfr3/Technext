@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getPosts } from "../redux/ApiData";
-import add from "date-fns/add";
+// import add from "date-fns/add";
 import format from "date-fns/format";
+import addYears from "date-fns/addYears";
+import addWeeks from "date-fns/addWeeks";
+import addMonths from "date-fns/addMonths";
 
-const Search = () => {
+const Filters = () => {
   const [filter, setFilter] = useState({ rocketName: "", "start/end": "" });
 
   const handleChange = (e) => {
@@ -22,27 +25,26 @@ const Search = () => {
   const handleLaunchDateChange = (e) => {
     if (e.target.value === "last-week") {
       const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(add(new Date(), { weeks: 1 }), "yyyy-MM-dd");
+      const end = format(addWeeks(new Date(), -1), "yyyy-MM-dd");
       setFilter((oldFilter) => ({
         ...oldFilter,
         "start/end": `start=${start}&end=${end}`,
       }));
     } else if (e.target.value === "last-month") {
       const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(add(new Date(), { months: 1 }), "yyyy-MM-dd");
+      const end = format(addMonths(new Date(), -1), "yyyy-MM-dd");
       setFilter((oldFilter) => ({
         ...oldFilter,
         "start/end": `start=${start}&end=${end}`,
       }));
     } else if (e.target.value === "last-year") {
       const start = format(new Date(), "yyyy-MM-dd");
-      const end = format(add(new Date(), { year: 1 }), "yyyy-MM-dd");
+      const end = format(addYears(new Date(), -1), "yyyy-MM-dd");
       setFilter((oldFilter) => ({
         ...oldFilter,
         "start/end": `start=${start}&end=${end}`,
       }));
     }
-
     dispatch(getPosts(filter));
   };
 
@@ -50,15 +52,15 @@ const Search = () => {
     <form onSubmit={handleSubmit} className="d-flex">
       <input
         data-testid="searchInput"
-        className="form-control"
+        className="form-control shadow-sm"
         type="text"
         placeholder="Type here..."
         value={filter.rocketName}
         onChange={handleChange}
       />
-      <button className="btn btn-primary">search</button>
+      <button className="btn btn-primary shadow-sm">search</button>
       <select
-        className="form-select ms-3"
+        className="form-select ms-3 shadow-sm"
         defaultValue={"DEFAULT"}
         onChange={handleLaunchDateChange}
       >
@@ -73,4 +75,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default Filters;

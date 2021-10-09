@@ -21,13 +21,14 @@ A step by step list of commands that informs how to install an instance of this 
 - `npm install bootstrap`
 - `npm install reactstrap`
 - `npm install react-loader-spinner`
-- `npm install axios`
+- `npm install rakib-flex-style`
 
 ## Features
 
 - Used Bootstrap to make it 100% responsive.
-- Used Redux for state management
+- Used Redux/toolkit for state management
 - Used react-loader-spinner for showing loader
+- Used rakib-flex-style for using flex-properties
 - Used Jest for unit testing
 
 ## Running the tests

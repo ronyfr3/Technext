@@ -20,21 +20,23 @@ const Cards = () => {
         {data?.map((x, i) => {
           return (
             <div
-              className="card m-2 shadow"
+              className="card m-3 shadow text-center bg-secondary bg-gradient"
               style={{ width: "300px", height: "300px" }}
               key={i}
             >
               <img
-                className="card-img-top h-50 w-50 mx-auto mt-2"
+                className="card-img-top h-50 w-50 mx-auto mt-3 mb-3"
                 src={x?.links?.mission_patch}
                 alt={x?.rocket?.rocket_name}
               />
-              <div className="card-body">
-                <h4 className="card-title">
+              <div className="card-body bg-dark bg-gradient">
+                <h5 className="card-title text-info">
                   Rocket Name: {x?.rocket?.rocket_name}
-                </h4>
-                <p className="card-text">Launch Year: {x?.launch_year}</p>
-                <small className="card-text text-muted">
+                </h5>
+                <p className="card-text text-white">
+                  Launch Year: {x?.launch_year}
+                </p>
+                <small className="card-text text-secondary">
                   Rocket Type: {x?.rocket?.rocket_type}
                 </small>
               </div>
