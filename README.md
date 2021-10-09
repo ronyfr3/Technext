@@ -2,6 +2,22 @@
 
 > Creating a React app with Redux Store management using an API source.
 
+## Installation & Run
+
+- Navigate to the root directory of the app
+- Run `npm install` to install the node packages
+- Run `npm start` to run the app
+
+## Running the tests
+
+Unit test is done using jest and react-testing-library
+
+Test can be run using `npm test` command in the home directory of the app
+
+## Deployment Notes
+
+This application is deployed to `Netlify`.Netlify is a web developer platform that multiplies productivity. By unifying the elements of the modern decoupled web, from local development to advanced edge.
+
 ## Requirements (Prerequisites)
 
 Tools and packages required to successfully install this project.
@@ -10,20 +26,6 @@ Tools and packages required to successfully install this project.
 - Package Manager (Node + Npm).
 - Git and CLI (Command Line Interface).
 - Code Editor.
-
-## Installation
-
-A step by step list of commands to install an instance of this project.
-
-- `npx create-react-app [app_name]`
-- `npm install react-redux`
-- `npm install @reduxjs/toolkit`
-- `npm install bootstrap`
-- `npm install reactstrap`
-- `npm install react-loader-spinner`
-- `npm install date-fns`
-- `npm install react-icons`
-- `npm install rakib-flex-style`
 
 ## Features
 
@@ -34,20 +36,6 @@ A step by step list of commands to install an instance of this project.
 - Used react-icons for using icons
 - Used rakib-flex-style for using flex-properties
 - Used Jest for unit testing
-
-## Running the tests
-
-Using `jest` for unit testing in this application.
-
-tests examples:
-
-1. `test Search.test.js file`
-2. `npm test`
-3. `Running test till finish`
-
-## Deployment Notes
-
-This application is deployed to `Netlify`.Netlify is a web developer platform that multiplies productivity. By unifying the elements of the modern decoupled web, from local development to advanced edge.
 
 ## Authors
 

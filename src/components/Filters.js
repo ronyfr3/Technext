@@ -5,7 +5,7 @@ import Select from "./Select";
 
 const launchDateOptions = [
   {
-    value: "DEFAULT",
+    value: "",
     text: "Choose launch date",
   },
   {
@@ -24,7 +24,7 @@ const launchDateOptions = [
 
 const launchStatusOption = [
   {
-    value: "DEFAULT",
+    value: "",
     text: "Choose launch status",
   },
   {
@@ -35,53 +35,50 @@ const launchStatusOption = [
 ];
 
 const Filters = ({
-  setFilters,
-  rocketName,
-  setRocketName,
-  searchByRocketName,
-}) => {
-  return (
+  setFilters, setRocketName, searchByRocketName, filters,
+}) => (
     <form
       onSubmit={searchByRocketName}
       className="container d-flex flex-column justify-content-center align-items-center"
     >
-      <SearchInput
-        value={rocketName}
-        onChange={(e) => setRocketName(e.target.value)}
-      />
-      <div className="d-flex mt-1">
+      <SearchInput onChange={(e) => setRocketName(e.target.value)}/>
+      <div className="d-flex flex-column mt-1">
         <div className="d-flex m-2">
           <Select
-            onChange={(e) =>
-              setFilters((oldFilters) => ({
-                ...oldFilters,
-                launchDate: e.target.value,
-              }))
+            onChange={(e) => setFilters((oldFilters) => ({
+              ...oldFilters,
+              launchDate: e.target.value,
+            }))
             }
             options={launchDateOptions}
+            value={filters.launchDate}
           />
           <Select
             options={launchStatusOption}
-            onChange={(e) =>
-              setFilters((oldFilters) => ({
-                ...oldFilters,
-                launchStatus: e.target.value,
-              }))
-            }
-          />
-        </div>
-        <Checkbox
-          label="Upcomming"
-          onChange={() =>
-            setFilters((oldFilters) => ({
+            onChange={(e) => setFilters((oldFilters) => ({
               ...oldFilters,
-              upcoming: !oldFilters.upcoming,
+              launchStatus: e.target.value,
             }))
-          }
+            }
+            value={filters.launchStatus}
+          />
+          <Checkbox
+          label="Upcomming"
+          onChange={() => setFilters((oldFilters) => ({
+            ...oldFilters, upcoming: !oldFilters.upcoming,
+          }))}
+          value={filters.upcoming}
         />
+        </div>
+        <div className="mt-3 d-flex justify-content-end">
+          <button className="btn btn-primary" onClick={() => setFilters({
+            launchDate: "",
+            launchStatus: "",
+            upcoming: false,
+          })}>Reset filters</button>
+        </div>
       </div>
     </form>
-  );
-};
+);
 
 export default Filters;

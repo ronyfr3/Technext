@@ -1,8 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import Filters from "../components/Filters";
 import LaunchList from "../components/LaunchList";
-import { useDispatch } from "react-redux";
-import { getPosts } from "../Api/Api";
+import getPosts from "../Api/Api";
 
 const Home = () => {
   const [filters, setFilters] = React.useState({
@@ -22,13 +22,11 @@ const Home = () => {
     dispatch(getPosts());
   }, [dispatch]);
 
-  console.log(filters);
-
   return (
     <div className="container d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
       <Filters
+        filters={filters}
         setFilters={setFilters}
-        rocketName={rocketName}
         setRocketName={setRocketName}
         searchByRocketName={searchByRocketName}
       />

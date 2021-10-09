@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getPosts } from "../Api/Api";
+import getPosts from "../Api/Api";
 
 const LaunchSlice = createSlice({
   name: "posts",
@@ -8,14 +8,14 @@ const LaunchSlice = createSlice({
     status: null,
   },
   extraReducers: {
-    [getPosts.pending]: (state, action) => {
+    [getPosts.pending]: (state) => {
       state.status = "loading";
     },
     [getPosts.fulfilled]: (state, action) => {
       state.data = action.payload;
       state.status = "success";
     },
-    [getPosts.rejected]: (state, action) => {
+    [getPosts.rejected]: (state) => {
       state.status = "failed";
     },
   },

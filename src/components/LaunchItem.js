@@ -6,8 +6,7 @@ const LaunchItem = ({
   upcoming,
   launch_year,
   launch_success,
-}) => {
-  return (
+}) => (
     <div
       className="card m-3 shadow-sm text-center"
       style={{ width: "300px", height: "300px" }}
@@ -28,7 +27,6 @@ const LaunchItem = ({
         </small>
       </div>
     </div>
-  );
-};
+);
 
 export default LaunchItem;

@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Loading from "./Loader";
-import { filterData } from "../utils/helpers";
+import filterData from "../utils/helpers";
 import LaunchItem from "./LaunchItem";
 
 const LaunchList = ({ filters }) => {
   const { data: launchList, status } = useSelector((state) => state.launches);
   const filteredLaunchList = React.useMemo(
     () => filterData(launchList, filters),
-    [launchList, filters]
+    [launchList, filters],
   );
   if (status === "loading") return <Loading />;
 
